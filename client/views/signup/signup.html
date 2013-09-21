@@ -1,0 +1,20 @@
+<template name="signup">
+	<button class="student-button">Student</button>
+	<button class="employer-button">Employer</button>
+
+	{{#if isStudent}}
+		{{> studentSignup}}
+	{{/if}}
+
+	{{#if isEmployer}}
+			{{> employerSignup}}
+	{{/if}}
+</template>
+
+<template name="studentSignup">
+	<h3>Student</h3>
+</template>
+
+<template name="employerSignup">
+	<h3>Employer</h3>
+</template>
