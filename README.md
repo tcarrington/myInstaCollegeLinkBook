@@ -1,0 +1,8 @@
+-client                   #Code that will run on the client
+	-css                  #CSS
+	-managers             #javascript code that goes with the templates
+	-views                #html templates
+-collections              #code related to our collections of models
+-lib                      #external libraries should they need to be used.
+-public                   #things like images and font files
+-server                   #Code that will run on the server
