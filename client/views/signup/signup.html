@@ -1,7 +1,10 @@
 <template name="signup">
-	<h1>Sign Up</h1>
-	<button class="student-button">Student</button>
-	<button class="employer-button">Employer</button>
+
+	<div style="text-align:center;">
+		<h1>Sign Up</h1>
+		<button class="student-button">Student</button>
+		<button class="employer-button">Employer</button>
+	</div>
 
 	{{#if isStudent}}
 		{{> studentSignup}}
@@ -22,17 +25,47 @@
 
 		<label for="email">Email</label>
 		<input type="email" name="email" id="email" />
+	</form>
 
-		<label for="password">Password</label>
-		<input type="password" name="password" id="password" />
+	<form method="POST" action="form-handler.php" onsubmit="return checkForm(this);">
+		<label for="fname">Password</label>
+		<input type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}" name="pwd1" onchange="
+  			this.setCustomValidity(this.validity.patternMismatch ? 'Password must contain at least 6 characters, including UPPER/lowercase and numbers' : '');
+  			if(this.checkValidity()) form.pwd2.pattern = this.value;
+		"></p>
 
-		<label for="confirm">Confirm Password</label>
-		<input type="password" name="confirm" id="confirm" />
+		<label for="fname">Confirm Password</label>
+		<input type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}" name="pwd2" onchange="
+  			this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');
+		"></p>
 
-		<input type="submit" value="Register" id="register" />
+		<p><input type="submit"></p>
+
 	</form>
 </template>
 
 <template name="employerSignup">
 	<h3>Employer</h3>
+	<form>
+		<label for="fname">Company Name</label>
+		<input type="text" name="fname" id="fname" />
+
+		<label for="email">Email</label>
+		<input type="email" name="email" id="email" />
+	</form>
+
+	<form method="POST" action="form-handler.php" onsubmit="return checkForm(this);">
+		<label for="fname">Password</label>
+		<input type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}" name="pwd1" onchange="
+  			this.setCustomValidity(this.validity.patternMismatch ? 'Password must contain at least 6 characters, including UPPER/lowercase and numbers' : '');
+  			if(this.checkValidity()) form.pwd2.pattern = this.value;
+		"></p>
+
+		<label for="fname">Confirm Password</label>
+		<input type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}" name="pwd2" onchange="
+  			this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');
+		"></p>
+		<p><input type="submit"></p>
+		
+	</form>
 </template>
