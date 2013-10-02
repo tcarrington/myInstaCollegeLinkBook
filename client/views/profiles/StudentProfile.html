@@ -1,0 +1,66 @@
+<template name="StudentProfile">
+	<div style="text-align:Left;">
+	<h1>Student's Page</h1>
+	</div>
+
+<!-- drop down menu -->
+	<div>
+		<label for="School"> School</label>
+		<select>
+			<option></option>
+			<option value="California State University,
+				 Chico"> California State University, Chico
+			</otpion>
+			<option value="University of California,
+				 Berkeley">University of California, Berkeley 
+			</option>
+		</select>
+	</div>
+
+	<!-- 
+	<form action="">
+		<p>Check all that apply</p>
+		<input type="checkbox" name="School" value="
+			Chico">CSCI 111<br>
+		<input type="checkbox" name="School" value="
+			Chico">CSCI 211 <br>
+		<input type="checkbox" name="School" value="
+			Chico">CSCI 430 <br>
+		<input type="checkbox" name="School" value="
+			Chico">EECE 320 <br>
+		<input type="checkbox" name="School" value="
+			Chico">Calculus <br>
+	</form>
+-->
+<!-- if statement 
+	if(.click(chico))
+	{
+		checkboxs appear for chico classes	
+	} -->
+	
+<!-- Checkboxs click all that apply -->
+
+<!--
+	{{#if School}}
+		{{> School}}
+	{{/if}}  -->
+
+</template>
+<!-- one way of doing a checkbox list -->
+<!-- cant get it to generate checkbox when chico is 
+	 selected -->
+<template name="Chico">
+	<form action="">
+		<p>Check all that apply</p>
+		<input type="checkbox" name="School" value="
+			Chico">CSCI 111<br>
+		<input type="checkbox" name="School" value="
+			Chico">CSCI 211 <br>
+		<input type="checkbox" name="School" value="
+			Chico">CSCI 430 <br>
+		<input type="checkbox" name="School" value="
+			Chico">EECE 320 <br>
+		<input type="checkbox" name="School" value="
+			Chico">Calculus <br>
+	</form>
+</template>
