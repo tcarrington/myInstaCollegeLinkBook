@@ -68,15 +68,5 @@ Template.signup.events({
 		}
 
 
-	},/*
-	'keypress #confirm': function(e) {
-		// FIX THIS
-		// 
-		// ========
-		var password = $('#password').val();
-		if (e.target.value != password) {
-			console.log('no match');
-		}
-		console.log(password, e.target.value);
-	}*/
+	},
 });
