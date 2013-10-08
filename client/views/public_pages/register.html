@@ -1,14 +1,16 @@
 <template name="register">
-	<h1>Sign Up</h1>
-	<button class="student-button">Student</button>
-	<button class="employer-button">Employer</button>
+	<div class="row register">
+		<h1>Sign Up</h1>
+		<button class="student-button">Student</button>
+		<button class="employer-button">Employer</button>
 
-	{{#if isStudent}}
-		{{> studentSignup}}
-	{{/if}}
-	{{#if isEmployer}}
-			{{> employerSignup}}
-	{{/if}}
+		{{#if isStudent}}
+			{{> studentSignup}}
+		{{/if}}
+		{{#if isEmployer}}
+				{{> employerSignup}}
+		{{/if}}
+	</div>
 </template>
 
 <template name="studentSignup">
