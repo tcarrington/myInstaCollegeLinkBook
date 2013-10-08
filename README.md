@@ -14,7 +14,7 @@
 	/*
 		Now students and recruiters are technically "user" models.
 		What sets them apart is accountType. Profiles vary based on this.
-		Companies and Schools can be their own models.
+		Companies, Schools, and classes will be their own models.
 		Also, filepicker is an external service that handles file uploads.
 		Makes it super easy for users to upload their own pictures.
 		We can also go the gravatar route which is nice.
@@ -66,6 +66,15 @@
 		name: 'Google',
 		description: 'Best Company ever!',
 		image: 'http://filepicker.io/api/file/hsbjhfbjshbdfhjbasdc'
+	}
+
+	Class: 
+	{
+		_id: 'POJkjbjhkBhjbjh',
+		createdAt: 91827863786587,
+		className: 'Algorithms 1',
+		classNumber: 'CSCI111',
+		description: 'Fundamental programming course.'
 	}
 
 	/*
