@@ -1,0 +1,38 @@
+<template name="signup">
+	<h1>Sign Up</h1>
+	<button class="student-button">Student</button>
+	<button class="employer-button">Employer</button>
+
+	{{#if isStudent}}
+		{{> studentSignup}}
+	{{/if}}
+	{{#if isEmployer}}
+			{{> employerSignup}}
+	{{/if}}
+</template>
+
+<template name="studentSignup">
+	<h3>Student</h3>
+	<form>
+		<label for="fname">First Name</label>
+		<input type="text" name="fname" id="fname" />
+
+		<label for="lname">Last Name</label>
+		<input type="text" name="lname" id="lname" />
+
+		<label for="email">Email</label>
+		<input type="email" name="email" id="email" />
+
+		<label for="password">Password</label>
+		<input type="password" name="password" id="password" />
+
+		<label for="confirm">Confirm Password</label>
+		<input type="password" name="confirm" id="confirm" />
+
+		<input type="submit" value="Register" id="register" />
+	</form>
+</template>
+
+<template name="employerSignup">
+	<h3>Employer</h3>
+</template>

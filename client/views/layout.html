@@ -4,7 +4,6 @@
 </head>
 <body>
 	<div class="container">
-		{{loginButtons}}
 		<div class="row header">
 			{{> header}}
 		</div>
@@ -25,13 +24,26 @@
 </template>
 
 <template name="header">
+	<div class="twelvecol">
+		<a href="#"><img src="/images/FM_banner.jpg" alt="Banner"/></a>
+	</div>
 </template>
 
 <template name="nav">
+	<ul class="directory eightcol">
+		<li><a class="active" href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	<ul class="controls fourcol last">
+		<li><a href="#">Register</a></li>
+		<li><a href="#">Login</a></li>
+	</ul>
 </template>
 
 <template name="errors">
 </template>
 
 <template name="footer">
+	<span class="twelvecol">Fresh Meet &copy; 2013</span>
 </template>
