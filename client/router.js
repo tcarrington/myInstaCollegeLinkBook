@@ -12,9 +12,9 @@ Router.map(function() {
 					Session.set('currentPage', 'About'); 
 				}
 	});
-	this.route('signup', {
+	this.route('register', {
 				onBeforeRun: function() {
-					Session.set('currentPage', 'Signup');
+					Session.set('currentPage', 'Register');
 				}
 	});
 	this.route('contact', {
