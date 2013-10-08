@@ -10,22 +10,68 @@
 
 
 	Our models
-	users:
+
+	/*
+		Now all of these are technically "user" models.
+		What sets them apart is accountType. Profiles vary based on this.
+		Also, filepicker is an external service that handles file uploads.
+		Makes it super easy for users to upload their own pictures.
+		We can also go the gravatar route which is nice.
+	*/
+
+	Student:
 	{
 		_id: 'ahjbHbhjabhBHJB',
 		createdAt: 1379609425768,
 		username: 'Testing',
 		email: 'testing@mail.csuchico.edu',
-		//accountType is where we designate student/company/school on signup
-		accountType: 'student',
-		//profile will be different for student/company/school 
+		accountType: 'student', 
 		profile: {
 			avatar: 'http://filepicker.io/api/file/hsbjhfbjshbdfhjbasdc',
 			shortDesc: "Hi, I'm a student looking for a job!",
 			longDesc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, voluptas animi veritatis soluta fuga in vel accusantium cupiditate vero culpa est molestias beatae nihil nisi facere incidunt accusamus eligendi distinctio.",
-			/* 
-			we'll have to think of how we'll store classes. if classes become their own model, then we would store those class id's in this array. Ex. classes: ['JHbngoipiohbJHbhbV', 'AkjsbjkaBJKBKJbbkjb']
-			*/
-			classes: [CSCI101, CSCI102],
+			classes: ['jhbhjBhjbHJVjv', 'jhBHJBhjbiouOOJ'],
 		}		
 	}
+
+	/* 
+		We'll store class id's in the classes array.
+	*/
+	
+	Recruiter: 
+	{
+		_id: 'KJHBjhkBhjvvgvjhV',
+		createdAt: 178561576528763,
+		username: 'SallyRecruiter',
+		email: 'sally@googlejobs.com',
+		accountType: 'recruiter',
+		profile: {
+			avatar: 'http://filepicker.io/api/file/hsbjhfbjshbdfhjbasdc',
+			company: 'LBhjkBJHbjhgv', //id for Google's company model
+			shortDesc: 'I love chico state students. Hit me up!',
+			longDesc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, asperiores, tempore, eius perferendis quibusdam recusandae unde non quos voluptate necessitatibus facere nulla cumque. Nihil veniam dignissimos iure iusto architecto veritatis.",
+			favoriteStudents: ['kjJNkjnbjkhkj', 'kJBkjbHVcfCFGc']
+		}
+	}
+
+	/*
+		Companies can be created by recruiters
+	*/
+	
+	Company: 
+	{
+		_id: 'JKHBhjbHJbjhb',
+		createdAt: 0987392688347,
+		name: 'Google',
+		description: 'Best Company ever!',
+		image: 'http://filepicker.io/api/file/hsbjhfbjshbdfhjbasdc'
+	}
+
+	/*
+		I'm not too sure on how we'll model schools.
+		Recruiters and students are similar enough. 
+		Schools, I'm not too sure on what we're looking for.
+		So I'll hold off until we can talk again.
+		Schools could look like the company model.
+		What will we call users who sign up to manage the schools?
+	*/
