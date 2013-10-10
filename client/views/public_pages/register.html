@@ -1,16 +1,134 @@
 <template name="register">
 	<div class="row register">
+<h2>Sign Up</h2>
+		<button class="student-button">Student</button>
+		<button class="employer-button">Employer</button>
+	</div>
+	{{#if isStudent}}
+		{{> studentSignup}}
+	{{/if}}
+	{{#if isEmployer}}
+			{{> employerSignup}}
+	{{/if}}
+</template>
+
+<template name="studentSignup">
+	<div class="sixcol">
+		<h4>Create a new Student Account</h4>
+		<div class="twelvecol">
+			<div class="sixcol">
+				<img src="/images/school.jpg" alt="jobs">
+			</div>
+			<div class="sixcol last">
+				<h5>JOBS</h5>
+				<p>find jobs and more text can fill this space up... more text copymore text copymore text copymore text copy </p>
+				<h5>COMPANIES</h5>
+				<p>search for companies and more text can fill this space up... </p>
+			</div>
+			<div class="sixcol">
+				<img src="/images/school.jpg" alt="school">
+			</div>
+			<div class="sixcol last">
+				<h5>SCHOOLS</h5>
+				<p>join your school and more text can fill this space up... </p>
+				
+				<h5>PROFILE</h5>
+				<p>build a profile! and more text can fill this space up... </p>
+			</div>
+		
+		</div>
+	</div>
+
+	<div class="sixcol last"> 
+		<form>
+			<label for="fname">First Name</label>
+			<input type="text" name="fname" id="fname" />
+
+			<label for="lname">Last Name</label>
+			<input type="text" name="lname" id="lname" />
+
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" />
+
+			<label for="school">School</label>
+			<input type="text" name="school" id="school" />
+
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" />
+
+			<label for="confirm">Confirm Password</label>
+			<input type="password" name="confirm" id="confirm" />
+			<br>
+			<input type="submit" value="Register" id="register" />
+		</form>
+	</div>
+</template>
+
+<template name="employerSignup">
+	<div class="sixcol">
+		<h4>Create a new Employer Account</h4>
+		<div class="twelvecol">
+			<div class="sixcol">
+				<img src="/images/company.jpg" alt="jobs">
+			</div>
+			<div class="sixcol last">
+				<h5>JOBS</h5>
+				<p>post jobs and more text can fill this space up... random words to make it look like there is text here! #morewords </p>
+				<h5>PROFILE</h5>
+				<p>build a profile! and more text can fill this space up... </p>
+			</div>
+			<div class="sixcol">
+				<img src="/images/company.jpg" alt="companies">
+			</div>
+			<div class="sixcol last">
+				<h5>STUDENTS</h5>
+				<p>search for companies and more text can fill this space up... </p>
+				<h5>SCHOOLS</h5>
+				<p>join your school and more text can fill this space up... </p>
+			</div>
+		
+		</div>
+	</div>
+	<div class="sixcol last"> 
+		<form>
+			<label for="fname">First Name</label>
+			<input type="text" name="fname" id="fname" />
+
+			<label for="lname">Last Name</label>
+			<input type="text" name="lname" id="lname" />
+
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" />
+
+			<label for="company">Company</label>
+			<input type="text" name="company" id="company" />
+
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password" />
+
+			<label for="confirm">Confirm Password</label>
+			<input type="password" name="confirm" id="confirm" />
+			<br>
+			<input type="submit" value="Register" id="register" />
+		</form>
+	</div>
+</template>
+
+
+
+
+
+		<!--  Tim's code
 		<h1>Sign Up</h1>
 		<button class="student-button">Student</button>
 		<button class="employer-button">Employer</button>
-
-		{{#if isStudent}}
-			{{> studentSignup}}
-		{{/if}}
-		{{#if isEmployer}}
-				{{> employerSignup}}
-		{{/if}}
 	</div>
+	{{#if isStudent}}
+		{{> studentSignup}}
+	{{/if}}
+	{{#if isEmployer}}
+			{{> employerSignup}}
+	{{/if}}
 </template>
 
 <template name="studentSignup">
@@ -38,3 +156,4 @@
 <template name="employerSignup">
 	<h3>Employer</h3>
 </template>
+-->
