@@ -1,10 +1,11 @@
 <template name="register">
-	<div class="row register" align="center">
+ 	<div class="row register" align="center">
 		<h2>Sign Up</h2>
 		<button class="student-button">Student</button>
 		<button class="employer-button">Employer</button>
 	</div>
-
+	
+	
 	{{#if isStudent}}
 		{{> studentSignup}}
 	{{/if}}

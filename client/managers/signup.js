@@ -1,4 +1,4 @@
-Template.register.helpers({
+Template.home.helpers({
 	isStudent: function() {
 		return Session.get('isStudent');
 	},
@@ -9,7 +9,7 @@ Template.register.helpers({
 
 Template.register.events({
 	//question for tim...
-	//on signup click employ, nav away, signup student. Result: navs to employ (bug)
+	//on signup click employ, nav away, signup student. Result: navs to employ
 	//click student signup needs to nav to correct page
 
 
