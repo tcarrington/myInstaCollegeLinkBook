@@ -8,6 +8,11 @@ Template.register.helpers({
 });
 
 Template.register.events({
+	//question for tim...
+	//on signup click employ, nav away, signup student. Result: navs to employ (bug)
+	//click student signup needs to nav to correct page
+
+
 	'click .student-button': function() {
 		Session.set('isStudent', true);
 		Session.set('isEmployer', false);
@@ -42,3 +47,6 @@ Template.register.events({
 		// console.log(password, e.target.value);
 	}
 });
+
+
+//question: is the signup.js manager tied to the register.html page? -taylor

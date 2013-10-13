@@ -1,15 +1,21 @@
-<template name="register">
+<template name="registerspecial">
 	<div class="row register" align="center">
 		<h2>Sign Up</h2>
-		<button class="student-button">Student</button>
-		<button class="employer-button">Employer</button>
-	</div>
 
+	</div>
+	<div class="row" align="center">
+		<div class="twocol">
+			<button class="student-button join-now">Student</button>
+		</div>
+		<div class="twocol last">
+			<button class="employer-button join-now">Employer</button>
+		</div>
+	</div>
 	{{#if isStudent}}
 		{{> studentSignup}}
 	{{/if}}
 	{{#if isEmployer}}
-		{{> employerSignup}}
+			{{> employerSignup}}
 	{{/if}}
 </template>
 
@@ -21,15 +27,20 @@
 				<img src="/images/school.jpg" alt="jobs">
 			</div>
 			<div class="sixcol last">
-				<p><strong>JOBS:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				<p><strong>COMPANIES:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<h5>Jobs</h5>
+				<p>find jobs and more text can fill this space up... more text copymore text copymore text copymore text copy </p>
+				<h5>Companies</h5>
+				<p>search for companies and more text can fill this space up... </p>
 			</div>
 			<div class="sixcol">
 				<img src="/images/school.jpg" alt="school">
 			</div>
 			<div class="sixcol last">
-				<p><strong>SCHOOLS:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				<p><strong>PROFILE:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<h5>Schools</h5>
+				<p>join your school and more text can fill this space up... </p>
+				
+				<h5>Profile</h5>
+				<p>build a profile! and more text can fill this space up... </p>
 			</div>
 		
 		</div>
@@ -77,15 +88,19 @@
 				<img src="/images/company.jpg" alt="jobs">
 			</div>
 			<div class="sixcol last">
-				<p><strong>JOBS:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				<p><strong>PROFILE:</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<h5>Jobs</h5>
+				<p>words</p>
+				<h5>Profile</h5>
+				<p>build a profile! and more text can fill this space up... </p>
 			</div>
 			<div class="sixcol">
 				<img src="/images/company.jpg" alt="companies">
 			</div>
 			<div class="sixcol last">
-				<p><strong>STUDENTS:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				<p><strong>SCHOOLS:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<h5>Students</h5>
+				<p>words</p>
+				<h5>Schools</h5>
+				<p>join your school and more text can fill this space up... </p>
 			</div>
 		
 		</div>
@@ -122,47 +137,3 @@
 		</form>
 	</div>
 </template>
-
-
-
-
-
-		<!--  Tim's code
-		<h1>Sign Up</h1>
-		<button class="student-button">Student</button>
-		<button class="employer-button">Employer</button>
-	</div>
-	{{#if isStudent}}
-		{{> studentSignup}}
-	{{/if}}
-	{{#if isEmployer}}
-			{{> employerSignup}}
-	{{/if}}
-</template>
-
-<template name="studentSignup">
-	<h3>Student</h3>
-	<form>
-		<label for="fname">First Name</label>
-		<input type="text" name="fname" id="fname" />
-
-		<label for="lname">Last Name</label>
-		<input type="text" name="lname" id="lname" />
-
-		<label for="email">Email</label>
-		<input type="email" name="email" id="email" />
-
-		<label for="password">Password</label>
-		<input type="password" name="password" id="password" />
-
-		<label for="confirm">Confirm Password</label>
-		<input type="password" name="confirm" id="confirm" />
-
-		<input type="submit" value="Register" id="register" />
-	</form>
-</template>
-
-<template name="employerSignup">
-	<h3>Employer</h3>
-</template>
--->

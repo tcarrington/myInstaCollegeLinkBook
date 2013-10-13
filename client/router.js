@@ -17,6 +17,11 @@ Router.map(function() {
 					Session.set('currentPage', 'Register');
 				}
 	});
+	this.route('registerspecial', {
+				onBeforeRun: function() {
+					Session.set('currentPage', 'Register');
+				}
+	});
 	this.route('contact', {
 				onBeforeRun: function() {
 					Session.set('currentPage', 'Contact');
