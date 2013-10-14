@@ -1,10 +1,17 @@
-Template.home.helpers({
+Template.register.helpers({
 	isStudent: function() {
 		return Session.get('isStudent');
 	},
+	isSchool: function() {
+		return Session.get('isSchool');
+	},
 	isEmployer: function() {
 		return Session.get('isEmployer');
+	},
+	isCompany: function() {
+		return Session.get('isCompany');
 	}
+
 });
 
 Template.register.events({
@@ -12,14 +19,29 @@ Template.register.events({
 	//on signup click employ, nav away, signup student. Result: navs to employ
 	//click student signup needs to nav to correct page
 
-
 	'click .student-button': function() {
 		Session.set('isStudent', true);
+		Session.set('isSchool', false);
 		Session.set('isEmployer', false);
+		Session.set('isCompany', false);
 	},
 	'click .employer-button': function() {
 		Session.set('isEmployer', true);
 		Session.set('isStudent', false);
+		Session.set('isSchool', false);
+		Session.set('isCompany', false);
+	},
+	'click .school-button': function() {
+		Session.set('isSchool', true);
+		Session.set('isStudent', false);
+		Session.set('isEmployer', false);
+		Session.set('isCompany', false);
+	},
+	'click .company-button': function() {
+		Session.set('isCompany', true);
+		Session.set('isStudent', false);
+		Session.set('isSchool', false);
+		Session.set('isEmployer', false);
 	},
 	'click #register': function(e) {
 		e.preventDefault();
@@ -47,6 +69,3 @@ Template.register.events({
 		// console.log(password, e.target.value);
 	}
 });
-
-
-//question: is the signup.js manager tied to the register.html page? -taylor
